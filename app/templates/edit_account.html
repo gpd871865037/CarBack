@@ -1,0 +1,66 @@
+{% include "header.html" %}
+{% include "nav.html" %}
+  <section id="content">
+    <section class="main padder">
+      <div class="clearfix">
+        <h4><i class="fa fa-edit"></i> 添加账号</h4>
+      </div>
+      <div class="row">
+        <div class="col-sm-12">
+          <section class="panel">
+            <div class="panel-body">
+              <form class="form-horizontal" method="post" data-validate="parsley" action="/edit_account_info">
+                <input type="hidden" name="id" value="{{ account.id }}"/>
+                <div class="form-group">
+                  <label class="col-lg-3 control-label">账号</label>
+                  <div class="col-lg-8">
+                    <input type="text" name="account" placeholder="test@example.com" class="bg-focus form-control" data-required="true" data-type="email" value="{{ account.account }}">
+                  </div>
+                </div>
+                <div class="form-group">
+                  <label class="col-lg-3 control-label">密码</label>
+                  <div class="col-lg-8">
+                    <input type="password" name="password" placeholder="Password" class="bg-focus form-control" value="{{ account.password }}">
+                    <div class="line line-dashed m-t-large"></div>
+                  </div>
+                </div>
+                <div class="form-group">
+                  <label class="col-lg-3 control-label">所属网站</label>
+                  <div class="col-lg-4">
+                    <select name="website" class="form-control">
+                      <option value="58同城" {% if "58同城" == account.website %} selected {% endif %} >58同城</option>
+                      <option value="赶集网" {% if "赶集网" == account.website %} selected {% endif %} >赶集网</option>
+                      <option value="人人车" {% if "人人车" == account.website %} selected {% endif %} >人人车</option>
+                    </select>
+                  </div>
+                </div>
+
+                <div class="form-group">
+                  <div class="col-lg-9 col-lg-offset-3">                      
+                    <button type="submit" class="btn btn-white">Cancel</button>
+                    <button type="submit" class="btn btn-primary">Save</button>
+                  </div>
+                </div>
+              </form>
+            </div>
+          </section>
+        </div>
+      </div>
+    </section>
+  </section>
+  {% include "footer.html" %}
+  <!-- datepicker -->
+  <script src="/static/js/datepicker/bootstrap-datepicker.js"></script>
+  <!-- slider -->
+  <script src="/static/js/slider/bootstrap-slider.js"></script>
+  <!-- file input -->
+  <script src="/static/js/file-input/bootstrap.file-input.js"></script>
+  <!-- combodate -->
+  <script src="/static/js/combodate/moment.min.js"></script>
+  <script src="/static/js/combodate/combodate.js"></script>
+  <!-- parsley -->
+  <script src="/static/js/parsley/parsley.min.js"></script>
+  <!-- select2 -->
+  <script src="/static/js/select2/select2.min.js"></script>
+</body>
+</html>

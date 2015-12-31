@@ -9,11 +9,11 @@
         <div class="col-sm-12">
           <section class="panel">
             <div class="panel-body">
-              <form class="form-horizontal" method="get" data-validate="parsley">
+              <form class="form-horizontal" method="post" data-validate="parsley" action="/add_account_info">
                 <div class="form-group">
                   <label class="col-lg-3 control-label">账号</label>
                   <div class="col-lg-8">
-                    <input type="text" name="email" placeholder="test@example.com" class="bg-focus form-control" data-required="true" data-type="email">
+                    <input type="text" name="account" placeholder="test@example.com" class="bg-focus form-control" data-required="true" data-type="email">
                   </div>
                 </div>
                 <div class="form-group">
@@ -26,10 +26,10 @@
                 <div class="form-group">
                   <label class="col-lg-3 control-label">所属网站</label>
                   <div class="col-lg-4">
-                    <select name="account" class="form-control">
-                      <option value="1">58同城</option>
-                      <option value="0">赶集网</option>
-                      <option value="0">人人车</option>
+                    <select name="website" class="form-control">
+                      <option value="58同城">58同城</option>
+                      <option value="赶集网">赶集网</option>
+                      <option value="人人车">人人车</option>
                     </select>
                   </div>
                 </div>

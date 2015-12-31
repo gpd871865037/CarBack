@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<component name="dataSourceStorage">
+  <data-source name="data" uuid="5a4cc5be-1d32-4598-bcd0-c4d1751788c5">
+    <database-info product="SQLite" version="3.8.9" jdbc-version="2.1" driver-name="SQLiteJDBC" driver-version="native"/>
+    <case-sensitivity plain-identifiers="mixed" quoted-identifiers="mixed"/>
+    <schema name="" catalog=""/>
+    <table name="car_image" schema="" catalog="" type="TABLE">
+      <column name="id" sqlType="INTEGER" precision="2000000000" scale="10" nullable="false" jdbcType="4"/>
+      <column name="path" sqlType="VARCHAR" precision="2000000000" scale="10" nullable="true" jdbcType="12"/>
+      <primary-key columns="id"/>
+    </table>
+    <table name="car_info" schema="" catalog="" type="TABLE">
+      <column name="id" sqlType="INTEGER" precision="2000000000" scale="10" nullable="false" jdbcType="4"/>
+      <column name="weixin_id" sqlType="VARCHAR" precision="2000000000" scale="10" nullable="true" jdbcType="12"/>
+      <column name="brand_id" sqlType="INTEGER" precision="2000000000" scale="10" nullable="true" jdbcType="4"/>
+      <column name="car_id" sqlType="INTEGER" precision="2000000000" scale="10" nullable="true" jdbcType="4"/>
+      <column name="model_id" sqlType="INTEGER" precision="2000000000" scale="10" nullable="true" jdbcType="4"/>
+      <column name="color" sqlType="VARCHAR" precision="2000000000" scale="10" nullable="true" jdbcType="12"/>
+      <column name="first_license_time" sqlType="DATETIME" precision="2000000000" scale="10" nullable="true" jdbcType="12"/>
+      <column name="maintenance" sqlType="INTEGER" precision="2000000000" scale="10" nullable="true" jdbcType="4"/>
+      <column name="accident" sqlType="INTEGER" precision="2000000000" scale="10" nullable="true" jdbcType="4"/>
+      <column name="inspection" sqlType="DATETIME" precision="2000000000" scale="10" nullable="true" jdbcType="12"/>
+      <column name="compulsory_insurance" sqlType="DATETIME" precision="2000000000" scale="10" nullable="true" jdbcType="12"/>
+      <column name="commercial_insurance" sqlType="DATETIME" precision="2000000000" scale="10" nullable="true" jdbcType="12"/>
+      <column name="mileage" sqlType="INTEGER" precision="2000000000" scale="10" nullable="true" jdbcType="4"/>
+      <column name="price" sqlType="INTEGER" precision="2000000000" scale="10" nullable="true" jdbcType="4"/>
+      <column name="title" sqlType="VARCHAR" precision="2000000000" scale="10" nullable="true" jdbcType="12"/>
+      <column name="description" sqlType="VARCHAR" precision="2000000000" scale="10" nullable="true" jdbcType="12"/>
+      <column name="information" sqlType="VARCHAR" precision="2000000000" scale="10" nullable="true" jdbcType="12"/>
+      <column name="contacts" sqlType="VARCHAR" precision="2000000000" scale="10" nullable="true" jdbcType="12"/>
+      <column name="contact_number" sqlType="VARCHAR" precision="2000000000" scale="10" nullable="true" jdbcType="12"/>
+      <column name="image_id" sqlType="VARCHAR" precision="2000000000" scale="10" nullable="true" jdbcType="12"/>
+      <primary-key columns="id"/>
+      <index name="ix_car_info_weixin_id" unique="true" columns="weixin_id"/>
+    </table>
+    <table name="cars" schema="" catalog="" type="TABLE">
+      <column name="id" sqlType="INTEGER" precision="2000000000" scale="10" nullable="false" jdbcType="4"/>
+      <column name="brand_id" sqlType="INTEGER" precision="2000000000" scale="10" nullable="true" jdbcType="4"/>
+      <column name="brand" sqlType="VARCHAR" precision="2000000000" scale="10" nullable="true" jdbcType="12"/>
+      <column name="car_id" sqlType="INTEGER" precision="2000000000" scale="10" nullable="true" jdbcType="4"/>
+      <column name="car" sqlType="VARCHAR" precision="2000000000" scale="10" nullable="true" jdbcType="12"/>
+      <column name="model_id" sqlType="INTEGER" precision="2000000000" scale="10" nullable="true" jdbcType="4"/>
+      <column name="model" sqlType="VARCHAR" precision="2000000000" scale="10" nullable="true" jdbcType="12"/>
+      <primary-key columns="id"/>
+    </table>
+    <table name="post_account" schema="" catalog="" type="TABLE">
+      <column name="id" sqlType="INTEGER" precision="2000000000" scale="10" nullable="false" jdbcType="4"/>
+      <column name="account" sqlType="VARCHAR" precision="2000000000" scale="10" nullable="true" jdbcType="12"/>
+      <column name="password" sqlType="VARCHAR" precision="2000000000" scale="10" nullable="true" jdbcType="12"/>
+      <column name="website" sqlType="VARCHAR" precision="2000000000" scale="10" nullable="true" jdbcType="12"/>
+      <primary-key columns="id"/>
+    </table>
+    <table name="users" schema="" catalog="" type="TABLE">
+      <column name="id" sqlType="INTEGER" precision="2000000000" scale="10" nullable="false" jdbcType="4"/>
+      <column name="weixin_id" sqlType="VARCHAR" precision="2000000000" scale="10" nullable="true" jdbcType="12"/>
+      <column name="phone" sqlType="INTEGER" precision="2000000000" scale="10" nullable="true" jdbcType="4"/>
+      <column name="name" sqlType="VARCHAR" precision="2000000000" scale="10" nullable="true" jdbcType="12"/>
+      <column name="head_image" sqlType="VARCHAR" precision="2000000000" scale="10" nullable="true" jdbcType="12"/>
+      <column name="created_times" sqlType="DATETIME" precision="2000000000" scale="10" nullable="true" jdbcType="12"/>
+      <column name="updated_times" sqlType="DATETIME" precision="2000000000" scale="10" nullable="true" jdbcType="12"/>
+      <column name="deleted_times" sqlType="DATETIME" precision="2000000000" scale="10" nullable="true" jdbcType="12"/>
+      <primary-key columns="id"/>
+      <index name="ix_users_weixin_id" unique="true" columns="weixin_id"/>
+    </table>
+  </data-source>
+</component>

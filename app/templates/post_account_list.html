@@ -36,6 +36,22 @@
                     </td>
                   </tr>
                 </tbody>
+                {% for account in accounts %}
+                    <tr>
+                      <td>
+                        {{ account.website }}
+                      </td>
+                      <td>{{ account.account }}</td>
+                      <td class="text-left">
+                        <div class="btn-group">
+                          <a href="#" class="dropdown-toggle" data-toggle="tooltip" data-original-title="详情"><i class="fa fa-info-circle"></i></a>&nbsp;&nbsp;&nbsp;&nbsp;
+                          <a href="/edit_account?id={{ account.id }}" class="dropdown-toggle" data-toggle="tooltip" data-original-title="修改"><i class="fa fa-pencil"></i></a>&nbsp;&nbsp;&nbsp;&nbsp;
+                          <a href="/delete_account?id={{ account.id }}" class="delete" class="dropdown-toggle" data-toggle="tooltip" data-original-title="删除"><i class="fa fa-trash-o"></i></a>&nbsp;&nbsp;&nbsp;&nbsp;
+                          <a href="#" class="dropdown-toggle" data-toggle="tooltip" data-original-title=""></a>&nbsp;&nbsp;&nbsp;&nbsp;
+                        </div>
+                      </td>
+                    </tr>
+                {% endfor %}
               </table>
             </div>
           </section>
@@ -46,13 +62,12 @@
 {% include "footer.html" %}
   <script>
     $(function(){
-      $("#delete").click(function(){
-        var r=confirm("你确定要删除吗？");
-        if (r==true) {
+      function confirm_click() {
+        return confirm("你确定要删除吗？");
+      }
 
-        } else {
-
-        }
+      $(".delete").click(function(){
+        return confirm_click();
       })
     });
   </script>
